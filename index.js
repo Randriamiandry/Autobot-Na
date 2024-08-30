@@ -582,16 +582,16 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
               });
             } else {
               const active = Math.ceil((sender.timestamp + delay * 1000 - now) / 1000);
-              api.sendMessage(`S'il vous plaît, attendez ${active} secondes avant d'utiliser le "${name}" command again.`, event.threadID, event.messageID);
+              api.sendMessage(`S'il vous plaît, attendez ${active} secondes avant d'utiliser le "${name}" commande à nouveau.`, event.threadID, event.messageID);
               return;
             }
           }
           if (event.body && !command && event.body?.toLowerCase().startsWith(prefix.toLowerCase())) {
-            api.sendMessage(`Invalid command please use ${prefix}help to see the list of available commands.`, event.threadID, event.messageID);
+            api.sendMessage(`Commande invalide, veuillez utiliser ${prefix}help pour voir la liste des commandes disponibles.`, event.threadID, event.messageID);
             return;
           }
           if (event.body && command && prefix && event.body?.toLowerCase().startsWith(prefix.toLowerCase()) && !aliases(command)?.name) {
-            api.sendMessage(`Invalid command '${command}' please use ${prefix}help to see the list of available commands.`, event.threadID, event.messageID);
+            api.sendMessage(`Invalid command '${command}' veuillez utiliser ${prefix}help pour voir la liste des commandes disponibles.`, event.threadID, event.messageID);
             return;
           }
           for (const {
