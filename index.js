@@ -582,7 +582,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
               });
             } else {
               const active = Math.ceil((sender.timestamp + delay * 1000 - now) / 1000);
-              api.sendMessage(`Please wait ${active} seconds before using the "${name}" command again.`, event.threadID, event.messageID);
+              api.sendMessage(`S'il vous plaît, attendez ${active} secondes avant d'utiliser le "${name}" command again.`, event.threadID, event.messageID);
               return;
             }
           }
