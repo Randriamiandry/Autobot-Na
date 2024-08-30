@@ -47,7 +47,7 @@ module.exports.run = async function({
                 for (let i = start; i < Math.min(end, commands.length); i++) {
                     helpMessage += `  ╭─╮\n  | 『 ${i + 1}.』  ${prefix}${commands[i]}\n  ╰─────────────◉\n`;
                 }
-                helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the previous page, type '${prefix}help'. L'objectif d'ATH BOT est de venir en aide à toute personne nécessitant une assistance.\n\n`;
+                helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. Pour afficher la page précédente,tapez'${prefix}help'. L'objectif d'ATH BOT est de venir en aide à toute personne nécessitant une assistance.\n\n`;
                 api.sendMessage(helpMessage, event.threadID, event.messageID);
             } else {
                 // Remaining code remains unchanged
