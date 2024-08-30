@@ -67,7 +67,7 @@ module.exports.handleEvent = async function({
 }) {
     const { threadID, messageID, body } = event;
     const message = prefix 
-        ? `Cc, mon préfixe est [ 𓆩 '${prefix}' 𓆪 ]\n\nSOME COMMANDS THAT MAY HELP YOU:\n➥ '${prefix}help [command]' -> information and usage of command\n\nHave fun using it, enjoy! ❤` 
+        ? `Cc, mon préfixe est [ 𓆩 '${prefix}' 𓆪 ]\n\nQUELQUES COMMANDES QUI PEUVENT VOUS AIDER:\n➥ '${prefix}help [command]' -> information and usage of command\n\nHave fun using it, enjoy! ❤` 
         : "Désolé, je n'ai pas de préfixe.";
     if (body?.toLowerCase().startsWith('prefix')) {
         api.sendMessage(message, threadID, messageID);
